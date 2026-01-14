@@ -19,7 +19,7 @@ const VoteValidator = {
             estado: 'blanco',
             id_partido: null,
             candidatos_preferenciales: [],
-            max_preferenciales: 2
+            max_preferenciales: 1
         },
         'senador-regional': {
             id_categoria: 5,

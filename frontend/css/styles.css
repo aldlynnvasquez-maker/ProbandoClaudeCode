@@ -58,11 +58,11 @@ body {
     font-weight: bold;
 }
 
-/* Grid de columnas */
+/* Grid de columnas - 5 COLUMNAS */
 .cedula-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    gap: 4px;
     margin-bottom: 15px;
 }
 
@@ -109,42 +109,75 @@ body {
     background-color: #8b6b47;
 }
 
-/* Instrucciones */
+/* Instrucciones - Ajustado para réplica exacta */
 .instrucciones {
-    background-color: #fef9e7;
+    background-color: #fffbf0;
     border: 1px solid #d4af37;
-    padding: 6px;
-    margin: 5px;
-    font-size: 9px;
+    padding: 4px 6px;
+    margin: 3px;
+    font-size: 7px;
 }
 
 .instrucciones p {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .instrucciones strong {
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .small-text {
-    font-size: 8px;
+    font-size: 7px;
     color: #666;
 }
 
 .ejemplo-marcas {
-    display: flex;
-    gap: 10px;
-    margin-top: 3px;
+    display: none;
 }
 
 .marca-ejemplo {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #333;
+    display: none;
+}
+
+/* Casillas para números preferenciales dentro del partido */
+.partido-numeros-preferenciales {
+    display: flex;
+    gap: 4px;
+    padding: 5px 3px;
+    background-color: #fafafa;
+    border-top: 1px dashed #ccc;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.casilla-numero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.casilla-numero-input {
+    width: 28px;
+    height: 28px;
+    border: 2.5px solid #000;
+    background-color: white;
     text-align: center;
-    line-height: 15px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    outline: none;
+}
+
+.casilla-numero-input:focus {
+    border-color: #2196f3;
+    background-color: #f0f8ff;
+}
+
+.casilla-numero-input::placeholder {
+    color: #ccc;
 }
 
 /* Lista de partidos */
@@ -154,10 +187,10 @@ body {
     max-height: 800px;
 }
 
-/* Partido item */
+/* Partido item - Redesigned for exact replica */
 .partido-item {
     border-bottom: 1px solid #ddd;
-    padding: 8px 5px;
+    padding: 4px 3px;
     cursor: pointer;
     transition: background-color 0.2s;
     position: relative;
@@ -178,29 +211,31 @@ body {
 .partido-header {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-bottom: 5px;
+    gap: 4px;
+    margin-bottom: 3px;
+    justify-content: space-between;
 }
 
 .partido-logo {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .partido-nombre {
     flex: 1;
-    font-size: 9px;
+    font-size: 7.5px;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.1;
+    padding: 0 3px;
 }
 
 .partido-checkbox {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #333;
+    width: 26px;
+    height: 26px;
+    border: 2.5px solid #000;
     flex-shrink: 0;
     position: relative;
     background-color: white;
@@ -213,15 +248,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
 }
 
-/* Candidatos preferenciales */
+/* Candidatos preferenciales - Redesigned */
 .candidatos-preferenciales {
-    margin-top: 5px;
-    padding-top: 5px;
+    margin-top: 3px;
+    padding-top: 3px;
     border-top: 1px dashed #ccc;
     display: none;
 }
@@ -233,11 +268,12 @@ body {
 .candidato-item {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 3px 0;
-    font-size: 8px;
+    gap: 3px;
+    padding: 2px 0;
+    font-size: 7px;
     cursor: pointer;
     transition: background-color 0.2s;
+    justify-content: space-between;
 }
 
 .candidato-item:hover {
@@ -251,20 +287,25 @@ body {
 }
 
 .candidato-numero {
-    width: 25px;
+    width: 30px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    font-size: 7px;
+    flex-shrink: 0;
+    padding-left: 3px;
 }
 
 .candidato-nombre {
     flex: 1;
     line-height: 1.1;
+    text-transform: uppercase;
+    padding: 0 2px;
 }
 
 .candidato-checkbox {
-    width: 14px;
-    height: 14px;
-    border: 1px solid #333;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
     flex-shrink: 0;
     position: relative;
     background-color: white;
@@ -276,7 +317,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     color: #000;
 }
@@ -544,7 +585,7 @@ body {
     50% { border-color: #ff9800; }
 }
 
-/* Responsive */
+/* Responsive - 5 COLUMNAS */
 @media (max-width: 1400px) {
     .cedula-grid {
         grid-template-columns: repeat(3, 1fr);
