@@ -27,7 +27,7 @@ const VoteValidator = {
             estado: 'blanco',
             id_partido: null,
             candidatos_preferenciales: [],
-            max_preferenciales: 2
+            max_preferenciales: 1
         },
         diputado: {
             id_categoria: 3,
